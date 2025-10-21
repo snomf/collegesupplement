@@ -1,0 +1,1552 @@
+[
+  {
+    "college_name": "Amherst College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Option A, Prompt 1: \"Amherst College is committed to learning through close colloquy and to expanding the realm of knowledge through scholarly research and artistic creation at the highest level. Its graduates link learning with leadership—in service to the College, to their communities, and to the world beyond.\" – from the Mission of Amherst College. What do you see as the benefits of linking learning with leadership and/or service? In your response, please share with us a time where you have seen that benefit through your own experience. (350 words)",
+          "name": "Supplemental Essay (Option A)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option A, Prompt 2: \"We seek an Amherst made stronger because it includes those whose experiences can enhance our understanding of our nation and our world. We do so in the faith that our humanity is an identity forged from diversity, and that our different perspectives enrich our inquiry, deepen our knowledge, strengthen our community, and prepare students to engage with an ever-changing world.\" - from the Trustee Statement on Diversity and Community. In what ways could your unique experiences enhance our understanding of our nation and our world? (350 words)",
+          "name": "Supplemental Essay (Option A)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option A, Prompt 3: \"Strong commitment to the freedom of inquiry lies at the heart of Amherst College’s mission to create a home in which the liberal arts may flourish. As a small residential liberal arts college that prides itself on the ability, curiosity, and diversity of its students, Amherst seeks to create a respectful environment in which members of its community feel emboldened to pursue their intellectual and creative passions.\" – from the Amherst College Statement of Academic and Expressive Freedom. Tell us about an intellectual or creative passion you have pursued; what did you learn about yourself through that pursuit? (350 words)",
+          "name": "Supplemental Essay (Option A)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option B: Please submit a graded paper from your junior or senior year that best represents your writing skills and analytical abilities. We are particularly interested in your ability to construct a tightly reasoned, persuasive argument that calls upon literary, sociological or historical evidence. You should NOT submit a laboratory report, journal entry, creative writing sample or in-class essay.",
+          "name": "Graded Paper (Option B)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option C: If you are/were an applicant to Amherst's Access to Amherst (A2A) program, you may use your A2A application essay in satisfaction of our Writing Supplement requirement.",
+          "name": "A2A Essay (Option C)",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Barnard College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Barnard College is an extraordinary community of women committed to fostering curiosity and the exploration of new experiences and ideas. By utilizing the resources of our campus, our Foundations curriculum, and New York City, our students expand their world and discover their own capabilities. How do you envision these intersecting components of Barnard shaping your academic and personal journey? (200 words max)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "In college, you will encounter others with diverse viewpoints and experiences. Describe an instance where you engaged with someone who held a different opinion and explain how it shaped your perspective on the issue. (150 words max)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are uploaded through the Barnard Application Portal, not IDOC. Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Bates College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Boston College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Boston University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Tax forms submitted via MyBU Portal, not IDOC. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Bowdoin College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Optional 2-minute video response to the supplemental essay prompt.",
+          "name": "Video Supplement",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Brown University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Brown's Open Curriculum allows students to explore broadly while also diving deeply into their academic pursuits. Tell us about any academic interests that excite you, and how you might pursue them at Brown. (200-250 words)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Students entering Brown often find that making their home on College Hill naturally invites reflection on where they came from. Share how an aspect of your growing up has inspired or challenged you, and what unique contributions this might allow you to make to the Brown community. (200-250 words)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Brown students care deeply about their work and the world around them. Students find contentment, satisfaction, and meaning in daily interactions and major discoveries. Whether big or small, mundane or spectacular, tell us about something that brings you joy. (200-250 words)",
+          "name": "Supplemental Essay 3",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What three words best describe you? (3 words)",
+          "name": "Short Answer 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What is your most meaningful extracurricular commitment, and what would you like us to know about it? (100 words)",
+          "name": "Short Answer 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "If you could teach a class on any one thing, whether academic or otherwise, what would it be? (100 words)",
+          "name": "Short Answer 3",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "In one sentence, Why Brown? (50 words)",
+          "name": "Short Answer 4",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required if parents are separated/divorced."
+    }
+  },
+  {
+    "college_name": "California Institute of Technology",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Have you had any extenuating circumstances (such as limited course selection, inconsistent grades, or disruptions), that have affected your coursework, but that are not described elsewhere in your application? If so, tell us about them here. (150 words)",
+          "name": "Optional Essay 1",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Some Caltech applicants engage in STEM competitions locally, nationally, or internationally (e.g., AIME, Science Olympiad, International Science Olympiads). If you have received any STEM honors or awards, list them here (with scores, if applicable). (150 words)",
+          "name": "Optional Essay 2",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Why did you choose your proposed area of interest? If you select 'Other', what topics are you interested in pursuing? (200 words)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Regardless of your STEM interest listed above, take this opportunity to nerd out and talk to us about whatever STEM rabbit hole you have found yourself falling into. Be as specific or broad as you would like. (no word limit)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Tell us how you initially found your interest and passion for science or any STEM topic and how you have pursued or developed this interest or passion. (100 words min; 200 words max)",
+          "name": "Supplemental Essay 3",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Tell us about a STEM-related experience from the last few years and share how and why it inspired your curiosity. (100 words min; 200 words max)",
+          "name": "Supplemental Essay 4",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "The creativity, inventiveness, and innovation of Caltech’s students, faculty, and researchers have won Nobel Prizes and put rovers on Mars. But Techers also imagine smaller scale innovations every day, from new ways to design solar cells to how to 3D-print dorm decor to experimenting in the kitchen. How have you been a creator, inventor, or innovator in your own life? (200 words min; 250 words max)",
+          "name": "Supplemental Essay 5",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Caltech's values include respect for a diversity of thoughts and ideas. How have you cultivated this value in your own life? (200 words min; 400 words max)",
+          "name": "Supplemental Essay 6",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "If there are aspects of your life or social or personal identity that you feel are not captured elsewhere in this application, please tell us about them below. (150 words max)",
+          "name": "Optional Short Answer 1",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "When not surveying the stars, peering through microscopes, or running through coding marathons, Caltech students pursue an eclectic array of interests that range from speed-cubing, reading, yoga, playing musical instruments and theater arts, to solving puzzles, hiking, painting, and building or inventing new gadgets. We understand that everyone needs an outlet or two. What is a favorite interest or hobby, and why does it bring you joy? (200 words max)",
+          "name": "Optional Short Answer 2",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Did you have a hard time narrowing it down to just one interest or hobby? We understand – Caltech students like to stay busy, too. Tell us about another hobby or interest! (150 words max)",
+          "name": "Optional Short Answer 3",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "CSS Profile is only required if NOT a U.S. citizen or eligible noncitizen. Tax documents are uploaded to their portal (Beaver Breakroom)."
+    }
+  },
+  {
+    "college_name": "Carleton College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Think about someone you connect with who's different from you. What do you find most meaningful about your interactions with them? (300 word limit)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Anything missing? Do you want to share more with us? If so, use this space to fill any gaps you think would assist us in reviewing your application.",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Case Western Reserve University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "If requested, tax forms are submitted through their own system, not IDOC. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Claremont McKenna College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "CMC’s mission is to prepare students for thoughtful and productive lives and responsible leadership in business, government, and the professions. With this mission in mind, please explain why you want to attend Claremont McKenna College.",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "A critical part of fulfilling our mission is living out the commitments of CMC’s Open Academy: Freedom of Expression, Viewpoint Diversity, and Constructive Dialogue. We want to learn more about your commitment to listening and learning from others with different viewpoints, perspectives, and life experiences from your own. (250-300 words)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Describe a time when engaging with someone about a specific topic resulted in you changing your attitude, belief, or behavior, or you changed the belief or behavior of someone else. What was the change that occurred for you, and what facilitated that change? What did you learn from that experience, and how has it informed how you engage with others? (250-300 words)",
+          "name": "Supplemental Essay 3",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Colby College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Colgate University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "On Colgate’s campus, students engage with individuals from a variety of socioeconomic backgrounds, races, ethnicities, religions, and perspectives during the course of their educational and social experiences. In 200-250 words, please share the benefits you see in engaging with a diverse body of students, faculty, and staff as part of your Colgate experience.",
+          "name": "Optional Essay 1",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Colgate students immerse themselves in social and intellectual pursuits that inspire them. Tell us in 200-250 words what inspires you and why you want to pursue that at Colgate.",
+          "name": "Optional Essay 2",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "I am fascinated by… (13 words max)",
+          "name": "Optional Short Answer 1",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "My favorite book, movie, or television show is… (13 words max)",
+          "name": "Optional Short Answer 2",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "The person I admire most is… (13 words max)",
+          "name": "Optional Short Answer 3",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "In the future, I hope to… (13 words max)",
+          "name": "Optional Short Answer 4",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "One historical figure I would like to meet is… (13 words max)",
+          "name": "Optional Short Answer 5",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "My favorite food is… (13 words max)",
+          "name": "Optional Short Answer 6",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "One thing I would change is… (13 words max)",
+          "name": "Optional Short Answer 7",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "My favorite place is… (13 words max)",
+          "name": "Optional Short Answer 8",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "I am the best version of myself when… (13 words max)",
+          "name": "Optional Short Answer 9",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Something that has changed my perspective is… (13 words max)",
+          "name": "Optional Short Answer 10",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "I am seeking a community that… (13 words max)",
+          "name": "Optional Short Answer 11",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "My favorite family/community/cultural tradition is… (13 words max)",
+          "name": "Optional Short Answer 12",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "I am drawn to Colgate University because… (13 words max)",
+          "name": "Optional Short Answer 13",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "College of the Holy Cross",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Colorado College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Colorado College values creating an equitable, environmentally conscious, and healthy community. Choose one of these areas – antiracism, sustainability, or wellness – and describe your experiences and the specific ways you plan to get involved in this area at CC. (no more than 300 words)",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents submitted via the CC Applicant Portal, not IDOC. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Columbia University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "List a selection of texts, resources and outlets that have contributed to your intellectual development outside of academic courses, including but not limited to books, journals, websites, podcasts, essays, plays, presentations, videos, museums and other content that you enjoy. (100 words or fewer)",
+          "name": "List Question",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "A hallmark of the Columbia experience is being able to learn and thrive in an equitable and inclusive community with a wide range of perspectives. Tell us about an aspect of your own perspective, viewpoint or lived experience that is important to you, and describe how it has shaped the way you would learn from and contribute to Columbia’s diverse and collaborative community. (150 words or fewer)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "In college/university, students are often challenged in ways that they could not predict or anticipate. It is important to us, therefore, to understand an applicant's ability to navigate through adversity. Please describe a barrier or obstacle you have faced and discuss the personal qualities, skills or insights you have developed as a result. (150 words or fewer)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Why are you interested in attending Columbia University? We encourage you to consider the aspect(s) that you find unique and compelling about Columbia. (150 words or fewer)",
+          "name": "Supplemental Essay 3",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What attracts you to your preferred areas of study at Columbia College? (150 words or fewer)",
+          "name": "Supplemental Essay 4",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Both biological/adoptive parents must submit financial information."
+    }
+  },
+  {
+    "college_name": "Cornell University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "What attracts you to your preferred college or school at Cornell? What majors or academic areas of interest excite you? Please discuss how your interests and related experiences have influenced your choice. Your response should show us that your interests and aspirations align with the college or school you have selected at Cornell. (300 word limit)",
+          "name": "College-Specific Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Dartmouth College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "As you seek admission to Dartmouth’s Class of 2029, what aspects of the college’s academic program, community, and/or campus environment attract your interest? How is Dartmouth a good fit for you? (100 words or fewer)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "”Be yourself,” Oscar Wilde advised. “Everyone else is taken.” Introduce yourself. (250 words)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Buddy Teevens ‘79 was a legendary and much-beloved coach at Dartmouth. He often told parents: “Your son will be a great football player when it’s football time, a great student when it’s academic time, and a great person all of the time.” If Coach Teevens had said that to you, what would it mean to be “a great person”? (250 words)",
+          "name": "Supplemental Essay 3",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Davidson College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "There are just under 4,000 4-year colleges and universities in the United States. Being as specific as possible, what interests you most about Davidson College (250-300 words)",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Tax returns are only required on a case-by-case basis. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Denison University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Duke University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "What is your sense of Duke as a university and a community, and why do you consider it a good match for you? If there’s something in particular about our offerings that attracts you, feel free to share that as well. (250 word limit)",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "We believe a wide range of viewpoints, beliefs, and lived experiences are essential to maintaining Duke as a vibrant and meaningful living and learning community. Feel free to share with us anything in this context that might help us better understand you and what you might bring to our community.",
+          "name": "Optional Essay 1",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Tell us about an experience in the past year or two that reflects your imagination, creativity, or intellect.",
+          "name": "Optional Essay 2",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "We believe there is benefit in sharing or questioning our beliefs or values; who do you agree with on the big important things, or who do you have your most interesting disagreements with? What are you agreeing or disagreeing about?",
+          "name": "Optional Essay 3",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Duke’s commitment to inclusion and belonging includes sexual orientation, gender identity, and gender expression. Feel free to share with us more about how your identity in this context has meaning for you as an individual or as a member of a community.",
+          "name": "Optional Essay 4",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "We recognize that not fully “fitting in” a community or place can sometimes be difficult. Duke values the effort, resilience, and independence that may require. Feel free to share with us circumstances where something about you is different and how that’s influenced your experiences or identity.",
+          "name": "Optional Essay 5",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Tax forms are only required if requested and are submitted to the Duke portal. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Emory University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Grinnell College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "How might your background, respect for the lived experiences of others, and/or eagerness to be exposed to new perspectives equip you to thrive at Grinnell and serve the common good? (400 words)",
+          "name": "Optional Essay",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": "https://www.grinnell.edu/admission/apply/questbridge",
+      "notes": "For U.S. citizens/eligible noncitizens, CSS Profile is NOT required. Documents are submitted via secure file transfer. International/DACA/undocumented students must submit the CSS Profile."
+    }
+  },
+  {
+    "college_name": "Hamilton College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "At Hamilton, we each bring different backgrounds and perspectives, and we teach one another about the world through our individual and shared experiences. In the spirit of Hamilton’s motto, Know Thyself, please reflect on your unique perspective and how Hamilton might shape it, as well as how your perspective will shape Hamilton. (350 words)",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Harvard College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Both parents must submit financial information if divorced/separated."
+    }
+  },
+  {
+    "college_name": "Haverford College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Johns Hopkins University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Tax documents submitted via IDOC upon request. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Macalester College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Macalester is one of a few highly selective liberal arts colleges located in the middle of a metropolitan area. Students benefit from the strong sense of community on campus and opportunities to engage in academic, social, and civic engagement options in the Twin Cities of Minneapolis and St. Paul. In what ways might Macalester's urban location enhance your academic, social, and/or community experiences? (300 words)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Four values permeate Macalester’s mission and purpose: academic distinction, internationalism, multiculturalism, and service to society. Guided by this mission, Macalester is a learning environment that affirms different identities and experiences and prepares graduates to work toward a more just and peaceful world. In what ways do your lived experiences, perspectives, or hopes for your college education connect with Macalester’s mission and community? (300 words)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Massachusetts Institute of Technology",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Tell us more about why this field of study [selected from a dropdown] at MIT appeals to you. (Max 100 words)",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Each parent must submit financial information if divorced/separated."
+    }
+  },
+  {
+    "college_name": "Middlebury College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are submitted directly to the college, not via IDOC. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Northwestern University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Painting “The Rock” is a tradition at Northwestern that invites all forms of expression—students promote campus events or extracurricular groups, support social or activist causes, show their Wildcat spirit (what we call “Purple Pride”), celebrate their culture, and more. What would you paint on The Rock, and why? (Fewer than 200 words)",
+          "name": "Optional Essay 1 (Choose 1-2)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Northwestern fosters a distinctively interdisciplinary culture. We believe discovery and innovation thrive at the intersection of diverse ideas, perspectives, and academic interests. Within this setting, if you could dream up an undergraduate class, research project, or creative effort (a start-up, a design prototype, a performance, etc.), what would it be? Who might be some ideal classmates or collaborators? (Fewer than 200 words)",
+          "name": "Optional Essay 2 (Choose 1-2)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Community and belonging matter at Northwestern. Tell us about one or more communities, networks, or student groups you see yourself connecting with on campus. (Fewer than 200 words)",
+          "name": "Optional Essay 3 (Choose 1-2)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Northwestern’s location is special: on the shore of Lake Michigan, steps from downtown Evanston, just a few miles from Chicago. What aspects of our location are most compelling to you, and why? (Fewer than 200 words)",
+          "name": "Optional Essay 4 (Choose 1-2)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Northwestern is a place where people with diverse backgrounds from all over the world can study, live, and talk with one another. This range of experiences and viewpoints immeasurably enriches learning. How might your individual background contribute to this diversity of perspectives in Northwestern’s classrooms and around our campus? (Fewer than 200 words)",
+          "name": "Optional Essay 5 (Choose 1-2)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "We want to be sure we’re considering your application in the context of your personal experiences: What aspects of your background (your identity, your school setting, your community, your household, etc.) have most shaped how you see yourself engaging in Northwestern’s community, be it academically, extracurricularly, culturally, politically, socially, or otherwise? (300 words)",
+          "name": "Optional Essay 6",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Oberlin College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are submitted via the Oberlin Financial Aid website, not IDOC. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Pomona College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Both biological parents must complete a CSS Profile."
+    }
+  },
+  {
+    "college_name": "Princeton University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "As a research institution that also prides itself on its liberal arts curriculum, Princeton allows students to explore areas across the humanities and the arts, the natural sciences, and the social sciences. What academic areas most pique your curiosity, and how do the programs offered at Princeton suit your particular interests? (250 words or fewer)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Princeton values community and encourages students, faculty, staff and leadership to engage in respectful conversations that can expand their perspectives and challenge their ideas and beliefs. As a prospective member of this community, reflect on how your lived experiences will impact the conversations you will have in the classroom, the dining hall or other campus spaces. What lessons have you learned in life thus far? What will your classmates learn from you? In short, how has your lived experience shaped you? (500 words or fewer)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Princeton has a longstanding commitment to understanding our responsibility to society through service and civic engagement. How does your own story intersect with these ideals? (250 words or fewer)",
+          "name": "Supplemental Essay 3",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What is a new skill you would like to learn in college? (50 words or fewer)",
+          "name": "Short Answer 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What brings you joy? (50 words or fewer)",
+          "name": "Short Answer 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What song represents the soundtrack of your life at this moment? (50 words or fewer)",
+          "name": "Short Answer 3",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": "https://admission.princeton.edu/apply/financial-aid-application-checklist",
+      "notes": "Requires the Princeton Financial Aid Application (PFAA) instead of the CSS Profile. Documents are uploaded to the applicant portal."
+    }
+  },
+  {
+    "college_name": "Rice University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Please explain why you wish to study in the academic areas you selected above. (150 words)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Based upon your exploration of Rice University, what elements of the Rice experience appeal to you? (150 words)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "The Residential College System is at the heart of Rice student life and is heavily influenced by the particular cultural traditions and unique life experiences each student brings. What life experiences and/or unique perspectives are you looking forward to sharing with fellow Owls in the residential college system? (500 words)",
+          "name": "Optional Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Rice is strengthened by its diverse community of learning and discovery that produces leaders and change agents across the spectrum of human endeavor. What perspectives shaped by your background, experiences, upbringing, and/or racial identity inspire you to join our community of change agents at Rice? (500 words)",
+          "name": "Optional Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Scripps College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "As the admission committee reviews your application, we'd like to know what about Scripps motivated you to apply? (200 words)",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "No financial aid information provided in the source data."
+    }
+  },
+  {
+    "college_name": "Skidmore College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "No financial aid information provided in the source data."
+    }
+  },
+  {
+    "college_name": "Smith College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "No financial aid information provided in the source data."
+    }
+  },
+  {
+    "college_name": "Stanford University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "What is the most significant challenge that society faces today? (50-word limit)",
+          "name": "Short Answer 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "How did you spend your last two summers? (50 word limit)",
+          "name": "Short Answer 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What historical moment or event do you wish you could have witnessed? (50-word limit)",
+          "name": "Short Answer 3",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Briefly elaborate on one of your extracurricular activities, a job you hold, or responsibilities you have (50-word limit)",
+          "name": "Short Answer 4",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "List five things that are important to you. (50-word limit)",
+          "name": "Short Answer 5",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Virtually all of Stanford's undergraduates live on campus. Write a note to your future roommate that reveals something about you or that will help your roommate — and us — get to know you better. (100 to 250 words)",
+          "name": "Roommate Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "No financial aid information provided in the source data."
+    }
+  },
+  {
+    "college_name": "Swarthmore College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "No financial aid information provided in the source data."
+    }
+  },
+  {
+    "college_name": "Tufts University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "University of Chicago",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "How does the University of Chicago, as you know it now, satisfy your desire for a particular kind of learning, community, and future? Please address with some specificity your own wishes and how they relate to UChicago (500 words max)",
+          "name": "Why UChicago Essay",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Extended Essay Prompt 1: We’re all familiar with green-eyed envy or feeling blue, but what about being “caught purple-handed”? Or “tickled orange”? Give an old color-infused expression a new hue and tell us what it represents. (Choose one of the extended essay options, 1-2 pages)",
+          "name": "Extended Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Extended Essay Prompt 2: “Ah, but I was so much older then / I'm younger than that now” – Bob Dylan. In what ways do we become younger as we get older? (Choose one of the extended essay options, 1-2 pages)",
+          "name": "Extended Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": false,
+      "idoc_or_equivalent": false,
+      "equivalent_link": "https://financialaid.uchicago.edu/undergraduate/apply/uchicago-financial-aid-worksheet",
+      "notes": "Requires the UChicago Financial Aid Worksheet instead of the CSS Profile. Documents are uploaded via the UChicago Account."
+    }
+  },
+  {
+    "college_name": "University of Notre Dame",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Briefly share what draws you to the area(s) of study you listed. (50 words)",
+          "name": "Short Answer 1",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Everyone has different priorities when considering their higher education options and building their college or university list. Tell us about your “non-negotiable” factor(s) when searching for your future college home. (150 words max)",
+          "name": "Short Answer 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Notre Dame’s undergraduate experience is characterized by a collective sense of care for every person. How do you foster service to others in your community? (150 words max)",
+          "name": "Short Answer 3",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Both biological parents must submit financial information if divorced/separated."
+    }
+  },
+  {
+    "college_name": "University of Pennsylvania",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Write a short thank-you note to someone you have not yet thanked and would like to acknowledge. (150-200 words)",
+          "name": "Thank You Note",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "How will you explore community at Penn? Consider how Penn will help shape your perspective, and how your experiences and perspective will help shape Penn. (150-200 words)",
+          "name": "Community Essay",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "School of Nursing: Penn Nursing intends to meet the health needs of a global, multicultural world by preparing its students to impact healthcare through advancing science. How will you contribute to our mission of promoting equity in healthcare and how will Penn Nursing contribute to your future nursing goals? (150-200 words)",
+          "name": "School-Specific Essay",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "College of Arts and Sciences: The flexible structure of The College of Arts and Sciences’ curriculum is designed to inspire exploration, foster connections, and help you create a path of study through general education courses and a major. What are you curious about and how would you take advantage of opportunities in the arts and sciences? (150-200 words)",
+          "name": "School-Specific Essay",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Wharton: Wharton prepares its students to make an impact by applying business methods and economic theory to real-world problems, including economic, political, and social issues. Please reflect on a current issue of importance to you and share how you hope a Wharton education would help you to explore it. (150-200 words)",
+          "name": "School-Specific Essay",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "School of Engineering: Penn Engineering prepares its students to become leaders in technology by combining a strong foundation in the natural sciences and mathematics with depth of study in focused disciplinary majors. Please share how you plan to pursue your engineering interests at Penn. (150-200 words)",
+          "name": "School-Specific Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are uploaded to the Penn Applicant Portal, not IDOC. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "University of Southern California",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "The student body at the USC Viterbi School of Engineering is a diverse group of unique engineers and computer scientists who work together to engineer a better world for all humanity. Describe how your contributions to the USC Viterbi student body may be distinct from others. Please feel free to touch on any part of your background, traits, skills, experiences, challenges, and/or personality in helping us better understand you. (Approximately 250 words)",
+          "name": "Viterbi School Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "The National Academy of Engineering (NAE) and their 14 Grand Challenges go hand-in-hand with our vision to engineer a better world for all humanity. Engineers and computer scientists are challenged to solve these problems in order to improve life on the planet. Learn more about the NAE Grand Challenges at http://engineeringchallenges.org and tell us which challenge is most important to you, and why. (Approximately 250 words)",
+          "name": "Viterbi School Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What is your favorite snack?",
+          "name": "Quick Take 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Best movie of all time?",
+          "name": "Quick Take 2",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Dream job?",
+          "name": "Quick Take 3",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "If your life had a theme song, what would it be?",
+          "name": "Quick Take 4",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Dream trip?",
+          "name": "Quick Take 5",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What TV show will you binge watch next?",
+          "name": "Quick Take 6",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Which well-known person or fictional character would be your ideal roommate?",
+          "name": "Quick Take 7",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Favorite book?",
+          "name": "Quick Take 8",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "If you could teach a class on any topic, what would it be?",
+          "name": "Quick Take 9",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are uploaded through the USC FAST Portal. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "University of Virginia",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Vanderbilt University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Vanderbilt University’s motto, Crescere aude, is Latin for “dare to grow.” In your response, reflect on how one or more aspects of your identity, culture, or background has played a role in your personal growth, and how it will contribute to our campus community as you dare to grow at Vanderbilt. Please provide your response in approximately 250 words.",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are uploaded via the applicant portal, not IDOC. Noncustodial Profile is NOT required."
+    }
+  },
+  {
+    "college_name": "Vassar College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "At Vassar, we aim to foster an inclusive community through our philosophy of engaged pluralism. Engaged pluralism is rooted in “the conviction that collaborating across differences is necessary for social transformation and critical for the well-being of any community and its members.” In short, we believe it's our differences that make us stronger. Tell us a little bit about an important part of your identity and how it has shaped your life and/or interactions with others. (Choose one prompt, 300 words or less)",
+          "name": "Supplemental Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Vassar is a diverse community that inspires positive change through open inquiry, deep dives into society’s most difficult challenges, and collaborative problem solving. We care deeply about one another, the communities that have forged us, and the community we build together on campus. Tell us about the community (or communities) you come from and how it has shaped your lived experiences and identity. (Choose one prompt, 300 words or less)",
+          "name": "Supplemental Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Washington and Lee University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "There are over 8,200 accredited colleges and universities in the U.S. alone. You have chosen to apply to Washington and Lee University. Please describe how you have familiarized yourself with W&L and what aspects of its community are most exciting to you. (250 words)",
+          "name": "Supplemental Essay",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "Please describe an aspect of your life outside of school that is important to you, such as an extracurricular activity, a job, or a family responsibility. How has your involvement shaped your personal qualities and growth, and how has it impacted those around you? (Optional, 250 words or less or max 2-minute video)",
+          "name": "Optional Essay 1",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "W&L’s mission statement focuses on preparing graduates for lifelong learning in a global and diverse society. Engaging with faculty, staff, and classmates with diverse identities, experiences, and perspectives is an essential component of our education. Recognizing that diversity takes many forms, what diverse aspect would you bring to W&L? (Optional, 250 words or less or max 2-minute video)",
+          "name": "Optional Essay 2",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Reveal to us how your curious mind works by sharing something you spend considerable time thinking or learning about. (Optional, 250 words or less or max 2-minute video)",
+          "name": "Optional Essay 3",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "On a residential college campus with a Speaking Tradition that encourages connections between individuals, using each other’s names matters. Please share the story of any name you go by and what significance it holds for you. (Optional, 250 words or less or max 2-minute video)",
+          "name": "Optional Essay 4",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are uploaded via the applicant portal, not IDOC. Noncustodial Profile required."
+    }
+  },
+  {
+    "college_name": "Washington University in St. Louis",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "WashU strives to know every undergraduate student 'By Name & Story'. How have your life experiences shaped your story? (Choose one prompt)",
+          "name": "Optional Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "WashU supports engagement in the St. Louis community by considering the university as 'In St. Louis, For St. Louis'. What is a community you are part of and your place of impact within it? (Choose one prompt)",
+          "name": "Optional Essay (Choose 1)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Submit a 90-second video to help us understand 'Who are you'?",
+          "name": "Optional Video Supplement",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are uploaded via the applicant portal. Noncustodial Profile is NOT required."
+    }
+  },
+  {
+    "college_name": "Wellesley College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Wesleyan University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Williams College",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  },
+  {
+    "college_name": "Yale University",
+    "college_description": "TBA",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Tell us about a topic or idea that excites you and is related to one or more academic areas you selected above. Why are you drawn to it? (200 words or fewer)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "What is it about Yale that has led you to apply? (125 words or fewer)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
+  }
+]
