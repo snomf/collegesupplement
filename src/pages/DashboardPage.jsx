@@ -17,9 +17,8 @@ export default function DashboardPage() {
       setLoading(true);
       const { data: { user } } = await supabase.auth.getUser();
       if (user) {
-        // Fetch Nickname
-        const { data: profile } = await supabase.from('profiles').select('nickname').eq('id', user.id).single();
-        if (profile) setNickname(profile.nickname);
+        // Get Nickname from session
+        setNickname(user.user_metadata?.display_name || '');
 
         // Fetch Upcoming Deadlines
         const { data: deadlinesData } = await supabase.from('custom_deadlines').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(3);

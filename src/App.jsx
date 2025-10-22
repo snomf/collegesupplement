@@ -11,17 +11,12 @@ import NicknameSetupPage from './pages/NicknameSetupPage'
 
 function App() {
   const [session, setSession] = useState(null)
-  const [profile, setProfile] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       setSession(session);
-
-      if (session) {
-        await fetchUserProfile(session.user.id);
-      }
       setLoading(false);
     };
     fetchData();
@@ -29,30 +24,26 @@ function App() {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
       setSession(session);
       if (session) {
-        await fetchUserProfile(session.user.id);
-      } else {
-        setProfile(null);
+        // Ensure profile exists on login
+        const { data: profile } = await supabase.from('profiles').select('id').eq('id', session.user.id).single();
+        if (!profile) {
+            await supabase.from('profiles').insert([{ id: session.user.id, username: session.user.email }]);
+        }
       }
     });
 
     return () => subscription.unsubscribe();
   }, []);
 
-  const fetchUserProfile = async (userId) => {
-    const { data } = await supabase
-      .from('profiles')
-      .select('nickname')
-      .eq('id', userId)
-      .single();
-    setProfile(data);
-  };
+  // This function is no longer needed as we get profile from session
+  // const fetchUserProfile = async (userId) => { ... }
 
 
   if (loading) {
     return <div className="bg-background-dark min-h-screen" />;
   }
 
-  const requiresNicknameSetup = session && !profile?.nickname;
+  const requiresNicknameSetup = session && !session.user?.user_metadata?.display_name;
 
   return (
     <Router>

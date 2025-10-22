@@ -10,24 +10,20 @@ export default function NicknameSetupPage() {
   const handleSave = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const { data: { user } } = await supabase.auth.getUser();
 
-    if (user) {
-      const { error } = await supabase
-        .from('profiles')
-        .update({ nickname: nickname })
-        .eq('id', user.id);
+    const { error } = await supabase.auth.updateUser({
+      data: { display_name: nickname }
+    });
 
-      if (error) {
-        alert('Error saving nickname: ' + error.message);
-      } else {
-        // Force a session refresh to get the latest user data with the nickname
-        // A simple way is to navigate, but a better way might be to refresh state.
-        // For now, navigation will work to trigger the check in App.jsx again.
-        navigate('/dashboard', { replace: true });
-        window.location.reload(); // Ensure App.jsx refetches profile
-      }
+    if (error) {
+      alert('Error saving nickname: ' + error.message);
+    } else {
+      // The onAuthStateChange in App.jsx will handle the session update.
+      // We just need to navigate to the dashboard.
+      navigate('/dashboard', { replace: true });
+      window.location.reload(); // Force reload to ensure App component re-evaluates auth state
     }
+
     setLoading(false);
   };
 
