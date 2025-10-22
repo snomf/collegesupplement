@@ -1,8 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import supplogo from '../assets/supplogo.png'; // Make sure the logo path is correct
+import { NavLink, useNavigate } from 'react-router-dom';
+import { supabase } from '../supabaseClient';
+import supplogo from '../assets/supplogo.png';
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/', { replace: true });
+  };
+
   return (
     <nav className="bg-card-dark shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,18 +41,16 @@ export default function Navbar() {
                 >
                   My Schools
                 </NavLink>
-                 <NavLink
-                  to="/add-schools"
-                  className={({ isActive }) =>
-                    `px-3 py-2 rounded-md text-sm font-medium ${
-                      isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                    }`
-                  }
-                >
-                  Add Schools
-                </NavLink>
               </div>
             </div>
+          </div>
+          <div className="hidden md:block">
+            <button
+              onClick={handleLogout}
+              className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >
+              Logout
+            </button>
           </div>
         </div>
       </div>
