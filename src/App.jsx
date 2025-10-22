@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { supabase } from './supabaseClient'
 import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
+import MySchoolsPage from './pages/MySchoolsPage'
 import SchoolSelectionPage from './pages/SchoolSelectionPage'
 import SchoolDetailPage from './pages/SchoolDetailPage'
-import DeadlinesPage from './pages/DeadlinesPage'
 import NotFoundPage from './pages/NotFoundPage'
+import Navbar from './components/Navbar'
 
 function App() {
   const [session, setSession] = useState(null)
@@ -66,27 +67,29 @@ function App() {
 
   return (
     <Router>
+      {session && <Navbar />}
       <Routes>
         <Route
           path="/"
           element={!session ? <LoginPage /> : <Navigate to="/dashboard" />}
         />
+        <Route path="/dashboard" element={session ? <DashboardPage /> : <Navigate to="/" />} />
         <Route
-          path="/dashboard"
+          path="/my-schools"
           element={
             session ? (
               userSchools.length > 0 ? (
-                <DashboardPage />
+                <MySchoolsPage />
               ) : (
-                <SchoolSelectionPage />
+                <Navigate to="/add-schools" />
               )
             ) : (
               <Navigate to="/" />
             )
           }
         />
+        <Route path="/add-schools" element={session ? <SchoolSelectionPage /> : <Navigate to="/" />} />
         <Route path="/school/:schoolName" element={session ? <SchoolDetailPage /> : <Navigate to="/" />} />
-        <Route path="/deadlines" element={session ? <DeadlinesPage /> : <Navigate to="/" />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
