@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../supabaseClient';
 import schoolData from '../../data.json';
-import { FaHourglassHalf, FaCheck, FaTimes, FaExpandMore, FaPhone, FaGlobe } from 'react-icons/fa';
+import { FaHourglassHalf, FaCheck, FaTimes, FaChevronDown, FaPhone, FaGlobe } from 'react-icons/fa';
 
 // Placeholder data for sections not covered in data.json
 const deadlines = [
@@ -170,7 +170,7 @@ export default function SchoolDetailPage() {
                 <div className="lg:col-span-1 space-y-6">
                 <div className="bg-card-dark p-6 rounded-xl">
                     <h2 className="text-xl font-bold mb-4 flex justify-between items-center">
-                        {school.name} at a Glance <FaExpandMore />
+                        {school.name} at a Glance <FaChevronDown />
                     </h2>
 
                     <InfoSection title="Admissions Stats">
