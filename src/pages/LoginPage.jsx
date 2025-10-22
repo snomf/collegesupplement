@@ -50,7 +50,7 @@ export default function LoginPage() {
                     type="email"
                     autoComplete="email"
                     required
-                    className="form-input w-full rounded-lg border border-border-dark bg-background-dark h-14 pl-12 pr-4 placeholder:text-text-dark-secondary focus:border-primary focus:ring-primary"
+                    className="w-full rounded-lg border border-border-dark bg-background-dark h-14 pl-12 pr-4 placeholder:text-text-dark-secondary focus:border-primary focus:ring-primary"
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
