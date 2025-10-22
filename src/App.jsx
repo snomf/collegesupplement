@@ -35,10 +35,6 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
-  // This function is no longer needed as we get profile from session
-  // const fetchUserProfile = async (userId) => { ... }
-
-
   if (loading) {
     return <div className="bg-background-dark min-h-screen" />;
   }
