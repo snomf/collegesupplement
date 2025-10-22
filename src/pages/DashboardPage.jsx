@@ -15,32 +15,30 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchDashboardData = async () => {
       setLoading(true);
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        // Get Nickname from session
-        setNickname(user.user_metadata?.display_name || '');
-
-        // Fetch Upcoming Deadlines
-        const { data: deadlinesData } = await supabase.from('custom_deadlines').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(3);
-        setDeadlines(deadlinesData || []);
-
-        // Fetch Recent Activities
-        const { data: activitiesData } = await supabase.from('recent_activities').select('*').eq('user_id', user.id).order('created_at', { ascending: false }).limit(5);
-        setActivities(activitiesData || []);
-
-        // Calculate Progress
-        const { data: checklistsData } = await supabase.from('checklists').select('requirements').eq('user_id', user.id);
-        if (checklistsData) {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          setNickname(user.user_metadata?.display_name || '');
+          const { data: deadlinesData } = await supabase.from('custom_deadlines').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(3);
+          setDeadlines(deadlinesData || []);
+          const { data: activitiesData } = await supabase.from('recent_activities').select('*').eq('user_id', user.id).order('created_at', { ascending: false }).limit(5);
+          setActivities(activitiesData || []);
+          const { data: checklistsData } = await supabase.from('checklists').select('requirements').eq('user_id', user.id);
+          if (checklistsData) {
             let total = 0;
             let completed = 0;
             checklistsData.forEach(checklist => {
-                total += checklist.requirements.length;
-                completed += checklist.requirements.filter(r => r.status === 'Completed').length;
+              total += checklist.requirements.length;
+              completed += checklist.requirements.filter(r => r.status === 'Completed').length;
             });
             setProgress({ completed, total });
+          }
         }
+      } catch (error) {
+        console.error("Error fetching dashboard data:", error);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     };
     fetchDashboardData();
   }, []);
