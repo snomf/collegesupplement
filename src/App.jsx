@@ -11,6 +11,7 @@ import NotFoundPage from './pages/NotFoundPage'
 function App() {
   const [session, setSession] = useState(null)
   const [userSchools, setUserSchools] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -18,6 +19,7 @@ function App() {
       if (session) {
         fetchUserSchools(session.user.id)
       }
+      setLoading(false)
     })
 
     const {
@@ -56,6 +58,10 @@ function App() {
       .select('college_name')
       .eq('user_id', userId)
     setUserSchools(data.map(s => s.college_name))
+  }
+
+  if (loading) {
+    return <div>Loading...</div>
   }
 
   return (
