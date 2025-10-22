@@ -27,7 +27,7 @@ function App() {
         // Ensure profile exists on login
         const { data: profile } = await supabase.from('profiles').select('id').eq('id', session.user.id).single();
         if (!profile) {
-            await supabase.from('profiles').insert([{ id: session.user.id, username: session.user.email }]);
+            await supabase.from('profiles').insert([{ id: session.user.id }]);
         }
       }
     });
