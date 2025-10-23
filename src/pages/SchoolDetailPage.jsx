@@ -26,7 +26,7 @@ const SchoolDetailPage = ({ session }) => {
         .eq('school_name', schoolName);
 
       if (checklistError) console.error('Error fetching checklist:', checklistError);
-      else if (items.length === 0 && currentSchool.checklist) {
+      else if ((items || []).length === 0 && currentSchool.checklist) {
         const newItems = currentSchool.checklist.map(item => ({
           user_id: session.user.id,
           school_name: schoolName,
@@ -35,9 +35,9 @@ const SchoolDetailPage = ({ session }) => {
         }));
         const { data: insertedItems, error: insertError } = await supabase.from('checklists').insert(newItems).select();
         if (insertError) console.error('Error creating checklist items:', insertError);
-        else setChecklist(insertedItems);
+        else setChecklist(insertedItems || []);
       } else {
-        setChecklist(items);
+        setChecklist(items || []);
       }
 
       // Fetch custom deadlines
@@ -48,7 +48,7 @@ const SchoolDetailPage = ({ session }) => {
         .eq('school_name', schoolName);
 
       if (deadlinesError) console.error('Error fetching deadlines:', deadlinesError);
-      else setCustomDeadlines(deadlines);
+      else setCustomDeadlines(deadlines || []);
     };
 
     if (session) {

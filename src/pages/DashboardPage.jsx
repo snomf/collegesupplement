@@ -19,7 +19,7 @@ const DashboardPage = ({ session }) => {
         .eq('user_id', session.user.id);
 
       if (schoolError) console.error('Error fetching user schools:', schoolError);
-      else setUserSchools(schoolData);
+      else setUserSchools(schoolData || []);
 
       // Fetch all checklist items for progress
       const { data: checklistData, error: checklistError } = await supabase
@@ -28,7 +28,7 @@ const DashboardPage = ({ session }) => {
         .eq('user_id', session.user.id);
 
       if (checklistError) console.error('Error fetching checklist items:', checklistError);
-      else setChecklistItems(checklistData);
+      else setChecklistItems(checklistData || []);
 
       // Fetch upcoming deadlines (using corrected column 'date')
       const { data: deadlinesData, error: deadlinesError } = await supabase
@@ -39,7 +39,7 @@ const DashboardPage = ({ session }) => {
         .limit(3);
 
       if (deadlinesError) console.error('Error fetching deadlines:', deadlinesError);
-      else setDeadlines(deadlinesData);
+      else setDeadlines(deadlinesData || []);
 
       // Fetch recent activities
       const { data: activitiesData, error: activitiesError } = await supabase
@@ -50,7 +50,7 @@ const DashboardPage = ({ session }) => {
         .limit(3);
 
       if (activitiesError) console.error('Error fetching activities:', activitiesError);
-      else setActivities(activitiesData);
+      else setActivities(activitiesData || []);
     };
 
     fetchDashboardData();

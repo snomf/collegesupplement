@@ -20,7 +20,7 @@ const MySchoolsPage = ({ session }) => {
         .eq('user_id', session.user.id);
 
       if (error) console.error('Error fetching user schools:', error);
-      else setUserSchools(data.map(s => s.school_name));
+      else setUserSchools((data || []).map(s => s.school_name));
     };
 
     fetchUserSchools();
