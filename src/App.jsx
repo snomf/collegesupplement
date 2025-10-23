@@ -1,35 +1,28 @@
-import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { supabase } from './supabaseClient'
-import LoginPage from './pages/LoginPage'
-import DashboardPage from './pages/DashboardPage'
-import MySchoolsPage from './pages/MySchoolsPage'
-import SchoolDetailPage from './pages/SchoolDetailPage'
-import NotFoundPage from './pages/NotFoundPage'
-import Navbar from './components/Navbar'
-import NicknameSetupPage from './pages/NicknameSetupPage'
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { supabase } from './supabaseClient';
+import LoginPage from './pages/LoginPage';
+import DashboardPage from './pages/DashboardPage';
+import NicknameSetupPage from './pages/NicknameSetupPage';
+import MySchoolsPage from './pages/MySchoolsPage';
+import SchoolDetailPage from './pages/SchoolDetailPage';
+import NotFoundPage from './pages/NotFoundPage';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [session, setSession] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [session, setSession] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const getSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       setSession(session);
       setLoading(false);
     };
-    fetchData();
+    getSession();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
-      if (session) {
-        // Ensure profile exists on login
-        const { data: profile } = await supabase.from('profiles').select('id').eq('id', session.user.id).single();
-        if (!profile) {
-            await supabase.from('profiles').insert([{ id: session.user.id }]);
-        }
-      }
     });
 
     return () => subscription.unsubscribe();
@@ -43,35 +36,32 @@ function App() {
 
   return (
     <Router>
-      {session && <Navbar />}
+      {session && !requiresNicknameSetup && <Navbar session={session} />}
       <Routes>
-        <Route
-          path="/"
-          element={!session ? <LoginPage /> : <Navigate to="/dashboard" />}
-        />
+        <Route path="/" element={!session ? <LoginPage /> : <Navigate to="/dashboard" />} />
         <Route path="/setup-nickname" element={requiresNicknameSetup ? <NicknameSetupPage /> : <Navigate to="/dashboard" />} />
         <Route
           path="/dashboard"
           element={
             requiresNicknameSetup ? <Navigate to="/setup-nickname" /> :
-            session ? <DashboardPage /> : <Navigate to="/" />
+            session ? <DashboardPage session={session} /> : <Navigate to="/" />
           }
         />
         <Route
           path="/my-schools"
           element={
             requiresNicknameSetup ? <Navigate to="/setup-nickname" /> :
-            session ? <MySchoolsPage /> : <Navigate to="/" />
+            session ? <MySchoolsPage session={session} /> : <Navigate to="/" />
           }
         />
         <Route
             path="/school/:schoolName"
-            element={requiresNicknameSetup ? <Navigate to="/setup-nickname" /> : session ? <SchoolDetailPage /> : <Navigate to="/" />}
+            element={requiresNicknameSetup ? <Navigate to="/setup-nickname" /> : session ? <SchoolDetailPage session={session} /> : <Navigate to="/" />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

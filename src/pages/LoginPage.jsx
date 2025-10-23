@@ -1,75 +1,72 @@
-import { useState } from 'react'
-import { supabase } from '../supabaseClient'
+import { useState } from 'react';
+import { supabase } from '../supabaseClient';
+import logo from '../assets/supplogo.png';
 
-export default function LoginPage() {
-  const [loading, setLoading] = useState(false)
-  const [email, setEmail] = useState('')
+const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
 
-  const handleLogin = async (event) => {
-    event.preventDefault()
-
-    setLoading(true)
-    const { error } = await supabase.auth.signInWithOtp({
-      email: email,
-    })
-
-    if (error) {
-      alert(error.error_description || error.message)
-    } else {
-      alert('Check your email for the login link!')
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage('');
+    try {
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+      });
+      if (error) throw error;
+      setMessage('Check your email for the login link!');
+    } catch (error) {
+      setMessage(error.error_description || error.message);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false)
-  }
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-background-dark text-text-dark-primary">
-      <div className="w-full max-w-md p-8 space-y-8 bg-card-dark rounded-xl shadow-2xl">
-        <div>
-          <h2 className="text-center text-4xl font-black leading-tight tracking-[-0.033em]">
-            Welcome
-          </h2>
-          <p className="mt-2 text-center text-sm text-text-dark-secondary">
-            Sign in with a magic link. No password required.
-          </p>
+    <div className="min-h-screen bg-background-dark flex items-center justify-center">
+      <div className="w-full max-w-md p-8 space-y-8 bg-card-dark rounded-lg shadow-lg">
+        <div className="text-center">
+          <div className="flex justify-center items-center space-x-4">
+            <img src={logo} alt="Questrack Logo" className="h-10 w-10" />
+            <h1 className="text-3xl font-bold text-text-dark-primary">Questrack</h1>
+          </div>
+          <p className="text-text-dark-secondary mt-2">Sign in to keep track of QB supplements</p>
         </div>
-        <form className="mt-8 space-y-6" onSubmit={handleLogin}>
-          <div className="space-y-6">
-            <div>
-              <label htmlFor="email-address" className="sr-only">
-                Email Address
-              </label>
-              <div className="flex flex-col">
-                <p className="text-base font-medium leading-normal pb-2">Email Address</p>
-                <div className="relative">
-                  <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-dark-secondary">
-                    mail
-                  </span>
-                  <input
-                    id="email-address"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="w-full rounded-lg border border-border-dark bg-background-dark h-14 pl-12 pr-4 placeholder:text-text-dark-secondary focus:border-primary focus:ring-primary"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-              </div>
+        <form className="space-y-6" onSubmit={handleLogin}>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-text-dark-secondary">
+              Email address
+            </label>
+            <div className="mt-1">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                className="appearance-none block w-full px-3 py-2 border border-border-dark rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm bg-background-dark text-text-dark-primary"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </div>
+
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-base font-bold rounded-lg text-slate-50 bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary h-12"
               disabled={loading}
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50"
             >
-              {loading ? <span>Sending...</span> : <span>Send Magic Link</span>}
+              {loading ? 'Sending...' : 'Send Magic Link'}
             </button>
           </div>
         </form>
+        {message && <p className="mt-4 text-center text-sm text-text-dark-secondary">{message}</p>}
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default LoginPage;

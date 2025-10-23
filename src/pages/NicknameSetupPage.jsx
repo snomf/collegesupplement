@@ -2,54 +2,76 @@ import { useState } from 'react';
 import { supabase } from '../supabaseClient';
 import { useNavigate } from 'react-router-dom';
 
-export default function NicknameSetupPage() {
+const NicknameSetupPage = () => {
   const [nickname, setNickname] = useState('');
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  const handleSave = async (e) => {
+  const handleNicknameSetup = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setMessage('');
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) throw new Error("You must be logged in to set a nickname.");
 
-    const { error } = await supabase.auth.updateUser({
-      data: { display_name: nickname }
-    });
+      const { error } = await supabase.auth.updateUser({
+        data: { display_name: nickname },
+      });
 
-    if (error) {
-      alert('Error saving nickname: ' + error.message);
-    } else {
-      // The onAuthStateChange in App.jsx will handle the session update.
-      // We just need to navigate to the dashboard.
-      navigate('/dashboard', { replace: true });
-      window.location.reload(); // Force reload to ensure App component re-evaluates auth state
+      if (error) throw error;
+
+      // Manually refresh the session to get the latest user metadata
+      await supabase.auth.refreshSession();
+
+      navigate('/dashboard');
+    } catch (error) {
+      setMessage(error.error_description || error.message);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-background-dark text-white">
-      <div className="w-full max-w-md p-8 space-y-8 bg-card-dark rounded-xl shadow-2xl">
-        <h2 className="text-center text-3xl font-bold">Choose a Nickname</h2>
-        <p className="text-center text-gray-400">Please choose a nickname to continue.</p>
-        <form className="space-y-6" onSubmit={handleSave}>
-          <input
-            type="text"
-            placeholder="Your nickname"
-            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:ring-blue-500 focus:border-blue-500"
-            value={nickname}
-            onChange={(e) => setNickname(e.target.value)}
-            required
-          />
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 disabled:bg-gray-600"
-          >
-            {loading ? 'Saving...' : 'Save and Continue'}
-          </button>
+    <div className="min-h-screen bg-background-dark flex items-center justify-center">
+      <div className="w-full max-w-md p-8 space-y-8 bg-card-dark rounded-lg shadow-lg">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-text-dark-primary">Welcome!</h1>
+          <p className="text-text-dark-secondary">Let's set up your nickname.</p>
+        </div>
+        <form className="space-y-6" onSubmit={handleNicknameSetup}>
+          <div>
+            <label htmlFor="nickname" className="block text-sm font-medium text-text-dark-secondary">
+              Nickname
+            </label>
+            <div className="mt-1">
+              <input
+                id="nickname"
+                name="nickname"
+                type="text"
+                required
+                className="appearance-none block w-full px-3 py-2 border border-border-dark rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm bg-background-dark text-text-dark-primary"
+                value={nickname}
+                onChange={(e) => setNickname(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50"
+            >
+              {loading ? 'Saving...' : 'Save and Continue'}
+            </button>
+          </div>
         </form>
+        {message && <p className="mt-4 text-center text-sm text-text-dark-secondary">{message}</p>}
       </div>
     </div>
   );
-}
+};
+
+export default NicknameSetupPage;
