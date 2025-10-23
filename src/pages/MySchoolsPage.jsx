@@ -98,13 +98,20 @@ const MySchoolsPage = ({ session }) => {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {userSchools.map(schoolName => {
               const school = allSchools.find(s => s.name === schoolName);
+              if (!school) {
+                console.warn(`School data not found for: ${schoolName}`);
+                return null;
+              }
               return (
-                <div key={schoolName} className="bg-card-dark rounded-lg shadow-lg flex flex-col">
-                    <Link to={`/school/${schoolName}`} className="p-6 flex-grow">
-                      <h2 className="text-xl font-bold">{school.name}</h2>
-                      <p className="text-text-dark-secondary mt-2">{school.description}</p>
-                    </Link>
-                    <div className="p-4 border-t border-border-dark">
+                <div key={schoolName} className="bg-card-dark rounded-lg shadow-lg flex flex-col overflow-hidden">
+                    <img src={school.banner} alt={`${school.name} Banner`} className="w-full h-32 object-cover"/>
+                    <div className="p-6 flex-grow">
+                        <Link to={`/school/${schoolName}`}>
+                          <h2 className="text-xl font-bold hover:underline">{school.name}</h2>
+                          <p className="text-text-dark-secondary mt-2">{school.description}</p>
+                        </Link>
+                    </div>
+                    <div className="p-4 border-t border-border-dark mt-auto">
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
