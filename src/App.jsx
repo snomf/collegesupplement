@@ -63,7 +63,7 @@ function App() {
 
   return (
     <Router>
-      {session && <Navbar session={session} />}
+      {session && !requiresNicknameSetup && <Navbar session={session} />}
       <Routes>
         <Route
           path="/"
