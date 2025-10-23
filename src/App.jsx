@@ -63,7 +63,7 @@ function App() {
 
   return (
     <Router>
-      {session && <Navbar />}
+      {session && <Navbar session={session} />}
       <Routes>
         <Route
           path="/"
@@ -74,19 +74,19 @@ function App() {
           path="/dashboard"
           element={
             requiresNicknameSetup ? <Navigate to="/setup-nickname" /> :
-            session ? <DashboardPage /> : <Navigate to="/" />
+            session ? <DashboardPage session={session} /> : <Navigate to="/" />
           }
         />
         <Route
           path="/my-schools"
           element={
             requiresNicknameSetup ? <Navigate to="/setup-nickname" /> :
-            session ? <MySchoolsPage /> : <Navigate to="/" />
+            session ? <MySchoolsPage session={session} /> : <Navigate to="/" />
           }
         />
         <Route
             path="/school/:schoolName"
-            element={requiresNicknameSetup ? <Navigate to="/setup-nickname" /> : session ? <SchoolDetailPage /> : <Navigate to="/" />}
+            element={requiresNicknameSetup ? <Navigate to="/setup-nickname" /> : session ? <SchoolDetailPage session={session} /> : <Navigate to="/" />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
