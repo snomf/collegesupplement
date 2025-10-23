@@ -14,25 +14,45 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const fetchData = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      setSession(session);
-      setLoading(false);
-    };
-    fetchData();
-
+    setLoading(true);
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
-      setSession(session);
-      if (session) {
-        // Ensure profile exists on login
-        const { data: profile } = await supabase.from('profiles').select('id').eq('id', session.user.id).single();
-        if (!profile) {
-            await supabase.from('profiles').insert([{ id: session.user.id }]);
+      try {
+        if (session) {
+          // Ensure profile exists on login
+          const { data: profile, error: profileError } = await supabase
+            .from('profiles')
+            .select('id')
+            .eq('id', session.user.id)
+            .single();
+
+          if (profileError && profileError.code !== 'PGRST116') { // PGRST116 = 'Not Found'
+            throw profileError;
+          }
+
+          if (!profile) {
+            const { error: insertError } = await supabase.from('profiles').insert([{ id: session.user.id }]);
+            if (insertError) throw insertError;
+          }
         }
+        setSession(session);
+      } catch (error) {
+        console.error('Error during auth state change:', error);
+        // Handle error, maybe show a notification to the user
+      } finally {
+        setLoading(false);
       }
     });
 
-    return () => subscription.unsubscribe();
+    // Initial session fetch
+    const fetchInitialSession = async () => {
+        await supabase.auth.getSession();
+        // The onAuthStateChange listener will handle setting session and loading state
+    };
+    fetchInitialSession();
+
+    return () => {
+      subscription?.unsubscribe();
+    };
   }, []);
 
   if (loading) {
