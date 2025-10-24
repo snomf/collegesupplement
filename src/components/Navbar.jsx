@@ -1,13 +1,6 @@
-import { supabase } from '../supabaseClient';
-import { useNavigate, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Navbar = ({ session }) => {
-  const navigate = useNavigate();
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    navigate('/');
-  };
+const Navbar = () => {
 
   const linkClass = ({ isActive }) =>
     isActive
@@ -25,17 +18,6 @@ const Navbar = ({ session }) => {
                 <NavLink to="/my-schools" className={linkClass}>My Schools</NavLink>
               </div>
             </div>
-          </div>
-          <div className="flex items-center">
-            <span className="text-text-dark-secondary mr-4">
-              Welcome, {session.user.user_metadata.display_name}!
-            </span>
-            <button
-              onClick={handleLogout}
-              className="px-3 py-2 rounded-md text-sm font-medium text-white bg-primary hover:bg-primary/90"
-            >
-              Logout
-            </button>
           </div>
         </div>
       </div>

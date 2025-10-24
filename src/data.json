@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Amherst College",
+    "banner": "/school_banners/amherst.png",
+    "checklist": [
+      { "item": "QuestBridge Application" },
+      { "item": "Amherst College Supplement" }
+    ]
+  },
+  {
+    "name": "Bowdoin College",
+    "banner": "/school_banners/bowdoin.png",
+    "checklist": [
+        { "item": "QuestBridge Application" },
+        { "item": "Bowdoin College Supplement" }
+    ]
+  },
+  {
+    "name": "Brown University",
+    "banner": "/school_banners/brown.png",
+    "checklist": [
+        { "item": "QuestBridge Application" },
+        { "item": "Brown College Supplement" }
+    ]
+  },
+  {
+    "name": "California Institute of Technology",
+    "banner": "/school_banners/caltech.png",
+    "checklist": [
+        { "item": "QuestBridge Application" },
+        { "item": "Caltech College Supplement" }
+    ]
+  },
+    {
+    "name": "Carleton College",
+    "banner": "/school_banners/carleton.png",
+    "checklist": [
+        { "item": "QuestBridge Application" },
+        { "item": "Carleton College Supplement" }
+    ]
+  }
+]

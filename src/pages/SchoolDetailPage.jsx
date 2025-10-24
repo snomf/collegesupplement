@@ -1,10 +1,10 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
-import { supabase } from '../supabaseClient';
-import schoolsData from '../../data.json';
+import * as localStore from '../lib/localStorage';
+import allSchoolsData from '../data.json';
 import { format, parseISO } from 'date-fns';
 
-const SchoolDetailPage = ({ session }) => {
+const SchoolDetailPage = () => {
   const { schoolName } = useParams();
   const [school, setSchool] = useState(null);
   const [checklist, setChecklist] = useState([]);
@@ -14,73 +14,41 @@ const SchoolDetailPage = ({ session }) => {
   const [newDeadlineDate, setNewDeadlineDate] = useState('');
 
   useEffect(() => {
-    const currentSchool = schoolsData.schools.find(s => s.name === schoolName);
+    const currentSchool = allSchoolsData.find(s => s.name === schoolName);
     setSchool(currentSchool);
+    setChecklist(localStore.getChecklist(schoolName));
+    setCustomDeadlines(localStore.getCustomDeadlines().filter(d => d.school_name === schoolName));
+  }, [schoolName]);
 
-    const fetchData = async () => {
-      // Fetch checklist
-      let { data: items, error: checklistError } = await supabase
-        .from('checklists')
-        .select('*')
-        .eq('user_id', session.user.id)
-        .eq('school_name', schoolName);
-
-      if (checklistError) console.error('Error fetching checklist:', checklistError);
-      else if ((items || []).length === 0 && currentSchool.checklist) {
-        const newItems = currentSchool.checklist.map(item => ({
-          user_id: session.user.id,
-          school_name: schoolName,
-          item_name: item.name,
-          status: 'Not Started',
-        }));
-        const { data: insertedItems, error: insertError } = await supabase.from('checklists').insert(newItems).select();
-        if (insertError) console.error('Error creating checklist items:', insertError);
-        else setChecklist(insertedItems || []);
-      } else {
-        setChecklist(items || []);
-      }
-
-      // Fetch custom deadlines
-      const { data: deadlines, error: deadlinesError } = await supabase
-        .from('custom_deadlines')
-        .select('*')
-        .eq('user_id', session.user.id)
-        .eq('school_name', schoolName);
-
-      if (deadlinesError) console.error('Error fetching deadlines:', deadlinesError);
-      else setCustomDeadlines(deadlines || []);
-    };
-
-    if (session) {
-      fetchData();
+  const handleStatusChange = (itemId, newStatus) => {
+    localStore.updateChecklistItem(schoolName, itemId, newStatus);
+    setChecklist(localStore.getChecklist(schoolName));
+    if(newStatus === 'Completed') {
+        const item = checklist.find(i => i.id === itemId);
+        localStore.addRecentActivity({
+            activity_description: `Submitted <b>${item.item}</b> for ${schoolName}.`,
+            created_at: new Date().toISOString()
+        });
     }
-  }, [schoolName, session]);
-
-  const handleStatusChange = async (itemId, newStatus) => {
-    const { data, error } = await supabase.from('checklists').update({ status: newStatus }).eq('id', itemId).select();
-    if (error) console.error('Error updating status:', error);
-    else setChecklist(checklist.map(item => item.id === itemId ? data[0] : item));
   };
 
-  const handleAddDeadline = async () => {
+  const handleAddDeadline = () => {
     if (newDeadlineName && newDeadlineDate) {
-      const { data, error } = await supabase
-        .from('custom_deadlines')
-        .insert([{ user_id: session.user.id, school_name: schoolName, deadline_name: newDeadlineName, deadline_date: newDeadlineDate }])
-        .select();
-
-      if (error) console.error('Error adding deadline:', error);
-      else {
-        setCustomDeadlines([...customDeadlines, data[0]]);
-        setShowAddDeadlineModal(false);
-        setNewDeadlineName('');
-        setNewDeadlineDate('');
-      }
+      const newDeadline = {
+        school_name: schoolName,
+        deadline_name: newDeadlineName,
+        date: newDeadlineDate
+      };
+      localStore.addCustomDeadline(newDeadline);
+      setCustomDeadlines(localStore.getCustomDeadlines().filter(d => d.school_name === schoolName));
+      setShowAddDeadlineModal(false);
+      setNewDeadlineName('');
+      setNewDeadlineDate('');
     }
   };
 
   const progress = useMemo(() => {
-    if (checklist.length === 0) return 0;
+    if (!checklist || checklist.length === 0) return 0;
     const completed = checklist.filter(item => item.status === 'Completed').length;
     return Math.round((completed / checklist.length) * 100);
   }, [checklist]);
@@ -92,11 +60,9 @@ const SchoolDetailPage = ({ session }) => {
       <img src={school.banner} alt={`${school.name} banner`} className="w-full h-64 object-cover" />
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold">{school.name}</h1>
-        <p className="text-text-dark-secondary mt-2">{school.description}</p>
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            {/* Checklist */}
             <div className="bg-card-dark p-6 rounded-lg">
               <h2 className="text-2xl font-bold">Supplement Checklist</h2>
               <div className="mt-4">
@@ -108,7 +74,7 @@ const SchoolDetailPage = ({ session }) => {
               <div className="mt-4 space-y-4">
                   {checklist.map(item => (
                       <div key={item.id} className="bg-background-dark p-4 rounded-lg flex justify-between items-center">
-                          <p>{item.item_name}</p>
+                          <p>{item.item}</p>
                           <select value={item.status} onChange={(e) => handleStatusChange(item.id, e.target.value)} className="bg-border-dark text-white p-2 rounded">
                               <option>Not Started</option><option>In Progress</option><option>Completed</option>
                           </select>
@@ -116,22 +82,14 @@ const SchoolDetailPage = ({ session }) => {
                   ))}
               </div>
             </div>
-            {/* Custom Deadlines */}
             <div className="bg-card-dark p-6 rounded-lg mt-8">
               <div className="flex justify-between items-center">
                 <h2 className="text-2xl font-bold">Custom Deadlines</h2>
                 <button onClick={() => setShowAddDeadlineModal(true)} className="px-4 py-2 rounded-md text-sm font-medium text-white bg-primary hover:bg-primary/90">Add Deadline</button>
               </div>
               <div className="mt-4 space-y-4">
-                {customDeadlines.map(d => (<div key={d.id} className="bg-background-dark p-4 rounded-lg"><p className="font-semibold">{d.deadline_name}</p><p className="text-text-dark-secondary">{format(parseISO(d.deadline_date), 'MMMM d, yyyy')}</p></div>))}
+                {customDeadlines.map((d,i) => (<div key={i} className="bg-background-dark p-4 rounded-lg"><p className="font-semibold">{d.deadline_name}</p><p className="text-text-dark-secondary">{format(parseISO(d.date), 'MMMM d, yyyy')}</p></div>))}
               </div>
-            </div>
-          </div>
-          {/* Admission Stats */}
-          <div className="bg-card-dark p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Admission Stats</h2>
-            <div className="space-y-4">
-              {Object.entries(school.admission_stats).map(([key, value]) => (<div key={key} className="flex justify-between"><span className="text-text-dark-secondary capitalize">{key.replace(/_/g, ' ')}:</span><span>{value}</span></div>))}
             </div>
           </div>
         </div>
