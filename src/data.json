@@ -1,42 +1,100 @@
 [
   {
-    "name": "Amherst College",
-    "banner": "/school_banners/amherst.png",
-    "checklist": [
-      { "item": "QuestBridge Application" },
-      { "item": "Amherst College Supplement" }
-    ]
+    "college_name": "Amherst College",
+    "college_location": "Amherst, MA",
+    "summarized_intro": "Amherst College is a premier liberal arts college in Amherst, MA, known for its diverse student body and flexible Open Curriculum. With a 7:1 student-faculty ratio, students benefit from close academic mentorship and access to the Five College Consortium.",
+    "page_link": "https://www.questbridge.org/partners/college-partners/amherst-college",
+    "college_banner": "https://questbridge.imgix.net/content/uploads/partners/amherst-college/Amherst_Scenic_2018.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.9664&fp-y=0.7848&h=450&q=90&w=600&s=b5c25a62469f76ae06d51e3e614deebd",
+    "college_description": "Founded in 1821, Amherst College is widely considered to be one of the premier liberal arts colleges in the nation, enrolling about 1,900 talented, energetic and diverse young men and women. A commitment to diversity, defined in its broadest sense, is fundamental to Amherst’s mission. Coming from nearly every state and more than 70 countries, 48% of Amherst students self-identify as U.S. students of color, 13% of students are international, more than 17% of students are the first in their family to attend college, roughly 10% of students on campus are QuestBridge students, and nearly 57% of students receive financial aid from Amherst. With a wide variety of backgrounds, identities and interests, Amherst students create a vibrant college community.\n\nLocated in Amherst, Massachusetts, a town of 35,000 people in the western part of the state, the College’s 1,000-acre campus includes top-notch academic, athletic and residential facilities, as well as access to a wildlife sanctuary and a 10-mile bike path. As a residential college, 97% of students live in on-campus dormitories, and on-campus housing is guaranteed for all four years of college.\n\nWith an emphasis on small classes, close one-on-one contact between students and professors with a student-faculty ratio of 7 to 1, and extensive undergraduate research opportunities, Amherst offers 43 majors in the natural sciences, social sciences, humanities and the arts, and students can also create their own interdisciplinary majors.\nThe Open Curriculum provides students with an unusual degree of independence and flexibility to design an individualized academic program, without being constrained by general area, distribution, or core requirements.\n\nThrough Amherst's membership in the Five College Consortium, Amherst students may also take courses at Smith, Mount Holyoke and Hampshire Colleges and the University of Massachusetts-Amherst, and participate in a wide range of cooperative academic and extracurricular options.",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Option A, Prompt 1: \"Amherst College is committed to learning through close colloquy and to expanding the realm of knowledge through scholarly research and artistic creation at the highest level. Its graduates link learning with leadership—in service to the College, to their communities, and to the world beyond.\" – from the Mission of Amherst College. What do you see as the benefits of linking learning with leadership and/or service? In your response, please share with us a time where you have seen that benefit through your own experience. (350 words)",
+          "name": "Supplemental Essay (Option A)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option A, Prompt 2: \"We seek an Amherst made stronger because it includes those whose experiences can enhance our understanding of our nation and our world. We do so in the faith that our humanity is an identity forged from diversity, and that our different perspectives enrich our inquiry, deepen our knowledge, strengthen our community, and prepare students to engage with an ever-changing world.\" - from the Trustee Statement on Diversity and Community. In what ways could your unique experiences enhance our understanding of our nation and our world? (350 words)",
+          "name": "Supplemental Essay (Option A)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option A, Prompt 3: \"Strong commitment to the freedom of inquiry lies at the heart of Amherst College’s mission to create a home in which the liberal arts may flourish. As a small residential liberal arts college that prides itself on the ability, curiosity, and diversity of its students, Amherst seeks to create a respectful environment in which members of its community feel emboldened to pursue their intellectual and creative passions.\" – from the Amherst College Statement of Academic and Expressive Freedom. Tell us about an intellectual or creative passion you have pursued; what did you learn about yourself through that pursuit? (350 words)",
+          "name": "Supplemental Essay (Option A)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option B: Please submit a graded paper from your junior or senior year that best represents your writing skills and analytical abilities. We are particularly interested in your ability to construct a tightly reasoned, persuasive argument that calls upon literary, sociological or historical evidence. You should NOT submit a laboratory report, journal entry, creative writing sample or in-class essay.",
+          "name": "Graded Paper (Option B)",
+          "is_optional": true,
+          "number_required": 1
+        },
+        {
+          "prompt": "Option C: If you are/were an applicant to Amherst's Access to Amherst (A2A) program, you may use your A2A application essay in satisfaction of our Writing Supplement requirement.",
+          "name": "A2A Essay (Option C)",
+          "is_optional": true,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
   },
   {
-    "name": "Bowdoin College",
-    "banner": "/school_banners/bowdoin.png",
-    "checklist": [
-        { "item": "QuestBridge Application" },
-        { "item": "Bowdoin College Supplement" }
-    ]
+    "college_name": "Barnard College",
+    "college_location": "New York, NY",
+    "summarized_intro": "Barnard College is a leading liberal arts college for women in New York City, offering a unique partnership with Columbia University. Students benefit from a close-knit community while accessing the vast resources and coeducational experiences of a large research university.",
+    "page_link": "https://www.questbridge.org/partners/college-partners/barnard-college",
+    "college_banner": "https://questbridge.imgix.net/content/uploads/partners/barnard-college/Barnardphoto8.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=450&q=90&w=600&s=cc485c7d87c6b1c193b213d56878dbaf",
+    "college_description": "Founded in 1889, Barnard College had the bold vision of creating a liberal arts college for women. Ever since, the College has pushed generations of Barnard women to think critically about what it means to be a woman, a scholar, and a leader. Barnard aims to empower high-achieving young women with the highest-quality liberal arts education, providing the unmatched advantages of a fully residential college in a long-standing partnership with a large research university, Columbia University.\n\nStudents are encouraged to take advantage of interdisciplinary learning through exploring more than 50 fields of study in the social sciences, humanities, natural sciences, and arts. Some of the most popular majors at Barnard include: Psychology, Computer Science, Neuroscience and Behavior, Political Science, and English.\n\nBarnard is a community of accessible faculty members and dedicated students who embark collaboratively on a journey of intellectual risk-taking and discovery. The small, personal, and close-knit character of Barnard is augmented by Columbia’s resources, allowing students to benefit from both an all-women and a coeducational experience. Barnard’s unique and powerful partnership with Columbia University provides students the opportunity to cross-register for classes, participate in joint extracurricular activities, and more — in fact, Barnard is the only women’s college to offer NCAA Division I athletics through the Columbia-Barnard Athletic Consortium.\n\nAs a women’s college, Barnard embraces its responsibility to address issues of gender in all of their complexity to support students and cultivate the personal fortitude that will assist them in navigating the challenges they will encounter throughout their lives. Barnard holds a legacy of educating young women from first-generation and economically diverse backgrounds — ranked #12 of 64 elite colleges in the social mobility of its students by the Equality of Opportunity Project. Located in the cosmopolitan environment of New York City, Barnard prepares its graduates to thrive in different cultural surroundings in an increasingly connected world. Barnard students graduate ready to lead lives that are professionally rewarding and personally fulfilling.\n\n91% of Class of 2024 graduates had a job or attended graduate/professional school within six months of graduation — Top 5 industries where alumnae got jobs: Education; Healthcare, Biotech & Life Sciences; Financial Services; Law, Government & Politics; Non-Profit/NGO.\n\n75% of Barnard students participate in internships throughout NYC during their four years at the College.",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": [
+        {
+          "prompt": "Barnard College is an extraordinary community of women committed to fostering curiosity and the exploration of new experiences and ideas. By utilizing the resources of our campus, our Foundations curriculum, and New York City, our students expand their world and discover their own capabilities. How do you envision these intersecting components of Barnard shaping your academic and personal journey? (200 words max)",
+          "name": "Supplemental Essay 1",
+          "is_optional": false,
+          "number_required": 1
+        },
+        {
+          "prompt": "In college, you will encounter others with diverse viewpoints and experiences. Describe an instance where you engaged with someone who held a different opinion and explain how it shaped your perspective on the issue. (150 words max)",
+          "name": "Supplemental Essay 2",
+          "is_optional": false,
+          "number_required": 1
+        }
+      ]
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": false,
+      "equivalent_link": null,
+      "notes": "Documents are uploaded through the Barnard Application Portal, not IDOC. Noncustodial Profile required for divorced/separated parents."
+    }
   },
   {
-    "name": "Brown University",
-    "banner": "/school_banners/brown.png",
-    "checklist": [
-        { "item": "QuestBridge Application" },
-        { "item": "Brown College Supplement" }
-    ]
-  },
-  {
-    "name": "California Institute of Technology",
-    "banner": "/school_banners/caltech.png",
-    "checklist": [
-        { "item": "QuestBridge Application" },
-        { "item": "Caltech College Supplement" }
-    ]
-  },
-    {
-    "name": "Carleton College",
-    "banner": "/school_banners/carleton.png",
-    "checklist": [
-        { "item": "QuestBridge Application" },
-        { "item": "Carleton College Supplement" }
-    ]
+    "college_name": "Bates College",
+    "college_location": "Lewiston, ME",
+    "summarized_intro": "Bates College is a nationally recognized liberal arts college in Lewiston, Maine, known for its founding principles of inclusion and a commitment to social justice. The college offers close faculty mentorship and an innovative academic calendar featuring an intensive \"Short Term\" for focused study and fieldwork.",
+    "page_link": "https://www.questbridge.org/partners/college-partners/bates-college",
+    "college_banner": "https://questbridge.imgix.net/content/uploads/partners/bates-college/241010_Drone_0065.JPG?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5206&fp-y=0.3254&h=450&q=90&w=600&s=212c05df0c8f61eca37dde5634888c29",
+    "college_description": "Located in Lewiston, Maine, Bates College is a nationally renowned college of the liberal arts and sciences. Among the first U.S. colleges to admit women and people of color, Bates was founded to challenge social hierarchies. The college today remains committed to inclusion, equity, and the belief that education can shape lives and build a more just world. This commitment to access has successfully removed barriers to education. Bates provides 100% of students’ demonstrated financial need.\n\nEducating approximately 1,800 students annually, Bates students thrive in a close-knit, residential community where the 9-to-1 student-to-faculty ratio ensures personal mentorship from professors who are accomplished scholars in their disciplines. Offering 37 majors, the curriculum emphasizes interdisciplinary learning, independent scholarship, and global perspectives, culminating in a senior thesis or capstone project. The academic calendar features two traditional semesters, as well as a spring Short Term that allows students to focus intensively on a single topic, often involving fieldwork opportunities locally, nationally, or abroad. Nearly 60 percent of students pursue study-abroad opportunities while at Bates, and financial aid recipients are able to use their aid to support their off-campus study program.\n\nThrough the Harward Center for Community Partnerships, Bates has become a national leader in community-engaged learning, integrating academic inquiry, research, fieldwork, and volunteerism to achieve real-world impact. Bates students actively engage with the local communities of Lewiston and Auburn, collectively Maine’s second-largest urban area, forming dynamic partnerships that enrich both campus and community life.\n\nPreparing students for meaningful and purposeful careers is at the heart of the liberal arts mission. The innovative Bates Center for Purposeful Work offers a four-year, developmental to career exploration, helping students identify their strengths and interests as they also gain the knowledge, skills, experiences, and networks necessary to pursue their post-Bates aspirations with imagination and integrity. The college is also supported by alumni worldwide who remain active with and connected to the Bates community through lifelong commitments of their time, talent, and financial generosity, including career networking opportunities.\n\nBates offers 31 varsity sports, 13 competitive club sports, and nearly a dozen intramural athletic leagues. The college competes in the New England Small College Athletic Conference (NESCAC), considered the most competitive NCAA Division III conference in the nation. With more than 100 clubs on campus, including popular activities like the Outing Club, dance, acappella, debate, theater, the arts, and more, students find no shortage of opportunities to be involved. Bates offers access to natural beauty and outdoor activities, and many students take part in hiking, skiing, and exploring the Maine wilderness. Bates is also a leader in sustainability, as one of only a handful of schools in the nation to hit the goal of becoming carbon neutral. \n\nPreparing leaders sustained by a love of learning and a commitment to responsible stewardship of the wider world, Bates is a college for coming times.",
+    "supplements_data": {
+      "accurate": false,
+      "supplements": []
+    },
+    "financial_aid": {
+      "css_required": true,
+      "idoc_or_equivalent": true,
+      "equivalent_link": null,
+      "notes": "Noncustodial Profile required for divorced/separated parents."
+    }
   }
 ]

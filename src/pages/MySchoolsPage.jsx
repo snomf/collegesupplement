@@ -1,18 +1,18 @@
 import { useState, useEffect, useMemo } from 'react';
 import * as localStore from '../lib/localStorage';
 import { Link } from 'react-router-dom';
-import allSchoolsData from '../data.json';
 import { FaTrash } from 'react-icons/fa';
 
 const MySchoolsPage = () => {
   const [userSchools, setUserSchools] = useState([]);
-  const [allSchools] = useState(allSchoolsData);
+  const [allSchools, setAllSchools] = useState([]);
   const [showAddSchoolModal, setShowAddSchoolModal] = useState(false);
   const [selectedSchool, setSelectedSchool] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     setUserSchools(localStore.getUserSchools());
+    setAllSchools(localStore.getAllSchools());
   }, []);
 
   const handleAddSchool = () => {
@@ -40,12 +40,12 @@ const MySchoolsPage = () => {
   };
 
   const filteredSchools = useMemo(() => {
-    let userSchoolNames = userSchools.map(s => s.name);
-    let availableSchools = allSchools.filter(school => !userSchoolNames.includes(school.name));
+    let userSchoolNames = userSchools.map(s => s.college_name);
+    let availableSchools = allSchools.filter(school => !userSchoolNames.includes(school.college_name));
 
     if (searchTerm) {
       availableSchools = availableSchools.filter(school =>
-        school.name.toLowerCase().includes(searchTerm.toLowerCase())
+        school.college_name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
@@ -71,19 +71,21 @@ const MySchoolsPage = () => {
                 return null;
               }
               return (
-                <div key={school.name} className="bg-card-dark rounded-lg shadow-lg flex flex-col overflow-hidden">
-                    <img src={school.banner} alt={`${school.name} Banner`} className="w-full h-32 object-cover"/>
+                <div key={school.college_name} className="bg-card-dark rounded-lg shadow-lg flex flex-col overflow-hidden">
+                    <img src={school.college_banner} alt={`${school.college_name} Banner`} className="w-full h-32 object-cover"/>
                     <div className="p-6 flex-grow">
-                        <Link to={`/school/${school.name}`}>
-                          <h2 className="text-xl font-bold hover:underline">{school.name}</h2>
+                        <Link to={`/school/${school.college_name}`}>
+                          <h2 className="text-xl font-bold hover:underline">{school.college_name}</h2>
                         </Link>
+                        <p className="text-sm text-text-dark-secondary">{school.college_location}</p>
+                        <p className="text-text-dark-secondary mt-2 text-sm">{school.summarized_intro}</p>
                     </div>
                     <div className="p-4 border-t border-border-dark mt-auto">
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
-                                if(window.confirm(`Are you sure you want to remove ${school.name}?`)) {
-                                    handleRemoveSchool(school.name);
+                                if(window.confirm(`Are you sure you want to remove ${school.college_name}?`)) {
+                                    handleRemoveSchool(school.college_name);
                                 }
                             }}
                             className="w-full flex justify-center items-center space-x-2 text-red-500 hover:bg-red-500/10 p-2 rounded"
@@ -115,11 +117,11 @@ const MySchoolsPage = () => {
             <div className="max-h-60 overflow-y-auto border border-border-dark rounded">
               {filteredSchools.map(school => (
                 <div
-                  key={school.name}
-                  className={`p-2 cursor-pointer hover:bg-primary/20 ${selectedSchool === school.name ? 'bg-primary' : ''}`}
-                  onClick={() => setSelectedSchool(school.name)}
+                  key={school.college_name}
+                  className={`p-2 cursor-pointer hover:bg-primary/20 ${selectedSchool === school.college_name ? 'bg-primary' : ''}`}
+                  onClick={() => setSelectedSchool(school.college_name)}
                 >
-                  {school.name}
+                  {school.college_name}
                 </div>
               ))}
             </div>

@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import * as localStore from '../lib/localStorage';
-import allSchoolsData from '../data.json';
 import { format, parseISO } from 'date-fns';
 
 const SchoolDetailPage = () => {
@@ -14,7 +13,8 @@ const SchoolDetailPage = () => {
   const [newDeadlineDate, setNewDeadlineDate] = useState('');
 
   useEffect(() => {
-    const currentSchool = allSchoolsData.find(s => s.name === schoolName);
+    const allSchools = localStore.getAllSchools();
+    const currentSchool = allSchools.find(s => s.college_name === schoolName);
     setSchool(currentSchool);
     setChecklist(localStore.getChecklist(schoolName));
     setCustomDeadlines(localStore.getCustomDeadlines().filter(d => d.school_name === schoolName));
@@ -53,13 +53,14 @@ const SchoolDetailPage = () => {
     return Math.round((completed / checklist.length) * 100);
   }, [checklist]);
 
-  if (!school) return <div>Loading...</div>;
+  if (!school) return <div className="min-h-screen bg-background-dark text-text-dark-primary p-8">Loading...</div>;
 
   return (
     <div className="min-h-screen bg-background-dark text-text-dark-primary">
-      <img src={school.banner} alt={`${school.name} banner`} className="w-full h-64 object-cover" />
+      <img src={school.college_banner} alt={`${school.college_name} banner`} className="w-full h-64 object-cover" />
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold">{school.name}</h1>
+        <h1 className="text-4xl font-bold">{school.college_name}</h1>
+        <p className="text-text-dark-secondary mt-4 whitespace-pre-wrap">{school.college_description}</p>
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
@@ -71,13 +72,16 @@ const SchoolDetailPage = () => {
                 </div>
                 <p className="text-right text-sm text-text-dark-secondary mt-1">{progress}% Complete</p>
               </div>
-              <div className="mt-4 space-y-4">
+              <div className="mt-6 space-y-4">
                   {checklist.map(item => (
-                      <div key={item.id} className="bg-background-dark p-4 rounded-lg flex justify-between items-center">
-                          <p>{item.item}</p>
-                          <select value={item.status} onChange={(e) => handleStatusChange(item.id, e.target.value)} className="bg-border-dark text-white p-2 rounded">
-                              <option>Not Started</option><option>In Progress</option><option>Completed</option>
-                          </select>
+                      <div key={item.id} className="bg-background-dark p-4 rounded-lg">
+                          <div className="flex justify-between items-center">
+                            <h3 className="font-bold text-lg">{item.item} {item.is_optional && <span className="text-xs font-normal text-text-dark-secondary ml-2">Optional</span>}</h3>
+                            <select value={item.status} onChange={(e) => handleStatusChange(item.id, e.target.value)} className="bg-border-dark text-white p-2 rounded">
+                                <option>Not Started</option><option>In Progress</option><option>Completed</option>
+                            </select>
+                          </div>
+                          <p className="text-text-dark-secondary mt-2 text-sm">{item.prompt}</p>
                       </div>
                   ))}
               </div>

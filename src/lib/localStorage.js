@@ -25,10 +25,14 @@ export const getAllData = () => {
   return getInitialData();
 };
 
+export const getAllSchools = () => {
+    return schoolData;
+}
+
 export const getUserSchools = () => {
   const data = getInitialData();
   return data.userSchools.map(schoolName =>
-    schoolData.find(s => s.name === schoolName)
+    schoolData.find(s => s.college_name === schoolName)
   );
 };
 
@@ -37,11 +41,13 @@ export const addUserSchool = (schoolName) => {
   if (!data.userSchools.includes(schoolName)) {
     data.userSchools.push(schoolName);
     // Initialize checklist for the new school
-    const school = schoolData.find(s => s.name === schoolName);
-    if (school && school.checklist) {
-      data.checklists[schoolName] = school.checklist.map((item, index) => ({
+    const school = schoolData.find(s => s.college_name === schoolName);
+    if (school && school.supplements_data && school.supplements_data.supplements) {
+      data.checklists[schoolName] = school.supplements_data.supplements.map((item, index) => ({
         id: index + 1,
-        item: item.item,
+        item: item.name,
+        prompt: item.prompt,
+        is_optional: item.is_optional,
         status: 'Not Started',
       }));
     }
